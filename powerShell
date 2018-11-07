@@ -1,0 +1,3 @@
+cmdlet
+======
+gwmi -list | ? {$_.name -like "win32*driver**"} |  select -first 2 | get-member | ft -wrap -autosize  -property Definition > prueba.txt
